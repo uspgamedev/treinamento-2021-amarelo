@@ -19,4 +19,4 @@ func calculate_direction():
 	return Vector2(
 		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"), 	# eixo x
 		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")		# eixo y
-	).normalized();
+	).normalized(); # TODO - não faz sentido usar get_action_strength e depois normalizar o vetor. O que vamos manter?
