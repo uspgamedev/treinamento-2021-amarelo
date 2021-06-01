@@ -4,9 +4,10 @@
 [ext_resource path="res://assets/icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 26.2518, 26.7381 )
+extents = Vector2( 26.2515, 26.738 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="Bullet" type="KinematicBody2D"]
+collision_layer = 16
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
