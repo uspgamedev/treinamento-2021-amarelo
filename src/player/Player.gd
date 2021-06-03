@@ -33,6 +33,6 @@ func _input(event):
 func shoot(aim: Vector2):
 	var bullet := bullet_scene.instance()
 	bullet.direction = (aim - position).normalized(); # Aplica a direção no sentido do jogador à região de clique do mouse.
-	bullet.position = position + bullet.direction * $Sprite.texture.get_width() * 1.5; # A posição de início do projétil é a uma distância de 1.5x a largura do Sprite
+	bullet.position = position + bullet.direction * $Sprite.texture.get_width() * bullet.scale * 1.5; # A posição de início do projétil é a uma distância de 1.5x a largura do Sprite
 	# TODO - essa fórmula para posição acima deverá ser alterada em um cenário em que o Sprite não possui dimensão quadrada ou circular.
 	get_parent().add_child(bullet)

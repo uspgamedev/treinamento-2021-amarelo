@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
 
-export var speed := 300;
+var speed;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	speed = rand_range(300, 500);
 	pass # Replace with function body.
 
 
