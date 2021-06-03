@@ -19,4 +19,4 @@ func _physics_process(delta):
 # Calcula a direção do movimento do inimigo em relação ao posição do Player.
 # Dessa forma, o inimigo sempre se move na direção do jogador, perseguindo-o.
 func calculate_direction():
-	return (get_parent().get_node("Player").position - position).normalized();
+	return (get_parent().get_node("Player").position - position).normalized(); # TODO - Wil disse para não fazer isso, rs.

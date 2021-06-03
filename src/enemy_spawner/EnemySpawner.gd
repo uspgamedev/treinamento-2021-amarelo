@@ -16,7 +16,7 @@ func _ready():
 func _on_Timer_timeout():
 	var enemy = enemy_scene.instance()
 	enemy.position = position
-	get_parent().add_child(enemy)
+	get_parent().add_child(enemy) # TODO - Wil disse para não fazer isso.
 	setup_timer()
 	
 
