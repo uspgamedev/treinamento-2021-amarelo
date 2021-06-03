@@ -9,4 +9,12 @@
 position = Vector2( 512, 288 )
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 256.313, 111.198 )
+position = Vector2( 57.8879, 82.6248 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 980.168, 35.0027 )
+speed = 200
+
+[node name="Enemy3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1123.03, 642.977 )
+speed = 100
