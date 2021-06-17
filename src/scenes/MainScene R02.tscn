@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Música/Reckoner.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Piskel_imagens/Cenário Quarto/Quarto R03.png" type="Texture" id=2]
+[ext_resource path="res://src/scenes/AudioStreamPlayer2D.gd" type="Script" id=3]
+[ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SegmentShape2D" id=1]
+b = Vector2( -3.05176e-05, 496 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( -32, 0 )
+b = Vector2( 528, 0 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -24, 488 )
+b = Vector2( 528, 488 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 152 )
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 256, 238 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+show_behind_parent = true
+collision_layer = 2
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+show_behind_parent = true
+position = Vector2( 9.09495e-13, 0 )
+scale = Vector2( 0.556442, 0.556442 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 26, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, 32 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, -27 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 477, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 468, 28 )
+shape = SubResource( 4 )

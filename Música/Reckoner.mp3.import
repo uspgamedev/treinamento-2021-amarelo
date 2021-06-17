@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Reckoner.mp3-bbff248a94627254dd25f077f9a7f408.mp3str"
+
+[deps]
+
+source_file="res://Música/Reckoner.mp3"
+dest_files=[ "res://.import/Reckoner.mp3-bbff248a94627254dd25f077f9a7f408.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
